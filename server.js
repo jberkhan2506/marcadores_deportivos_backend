@@ -2,10 +2,13 @@ const express=require('express')
 const mysql=require('mysql')
 const myconn=require('express-myconnection')
 const routes=require('./routes')
+const cors = require('cors')
 
 const app=express()
 
-app.set('port',9000)
+app.use(cors())
+
+app.set('port', 9000)
 
 const dbOption={
     host: 'localhost',
