@@ -15,7 +15,7 @@ const dbOption={
     port: '3306',
     user: 'quirama',
     password: 'Quijoma.77',
-    database: 'library'
+    database: 'marcadores'
 
 }
 ///middelwars------
