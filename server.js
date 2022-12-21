@@ -10,14 +10,25 @@ app.use(cors())
 
 app.set('port', 9000)
 
-const dbOption={
+/*const dbOption={
     host: 'localhost',
     port: '3306',
     user: 'UserProyect',
     password: 'SQLPassword',
     database: 'deporte'
 
+}*/
+
+const dbOption={
+    host: process.env.HOST_DB || 'localhost',
+    port: process.env.PORT_DB ||'3306',
+    user: process.env.USER_DB ||'UserProyect',
+    password: process.env.PASSWORD_DB ||'SQLPassword',
+    database: process.env.NAME_DB || 'deporte'
+
 }
+
+
 ///middelwars------
 app.use(myconn(mysql, dbOption,'single'))
 app.use(express.json())
